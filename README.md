@@ -16,7 +16,47 @@ To launch it you have to start HelloApplication
 ![image](Diagram/EcosystemClassDiagram.png)
 # Sequence diagram
 # SOLID principles
-### Liskov substitution principle
+## Liskov substitution principle
 Let q(x) be a property provable about objects of x of type T.
 Then q(y) should be provable for objects y of type S
 where S is a subtype of T.
+
+    public void move(Animal animal){
+        int timeM = animal.getTimeMove();
+        int timeR = animal.getTimeRest();
+        int rnd = (int)(Math.random()*10);
+        if(animal.getMoveSpeedX()!=0 || animal.getMoveSpeedY()!=0){ //check if animal is moving
+            if(animal.getX()>(double)(widthSize-radiusCircle/2) || animal.getX()<(double)(radiusCircle/2)){
+                animal.setMoveSpeedX(-animal.getMoveSpeedX());
+            }
+            if(animal.getY()>(double)(heightSize-radiusCircle/2) || animal.getY()<(double)(radiusCircle/2)){
+                animal.setMoveSpeedY(-animal.getMoveSpeedY());
+            }
+            animal.setX(animal.getX()+animal.getMoveSpeedX());
+            animal.setY(animal.getY()+animal.getMoveSpeedY());
+            animal.draw();
+            animal.setTimeMove(timeM);
+            if(animal.getTimeMove()==0){
+                animal.setMoveSpeedX(0);
+                animal.setMoveSpeedY(0);
+                animal.setTimeRest((int)(Math.random() * 500));
+            }
+        }
+        if(timeR>0 && animal.getMoveSpeedX()==0 && animal.getMoveSpeedY()==0){ //check if animal is resting
+            animal.setTimeRest(timeR);
+            if(animal.getTimeRest()==0){
+                if(rnd <= 5){
+                    animal.setMoveSpeedX(-Math.random());
+                    animal.setMoveSpeedY(-Math.random());
+                }
+                else{
+                    animal.setMoveSpeedX(Math.random());
+                    animal.setMoveSpeedY(Math.random());
+                }
+                createPoop(animal.getX(), animal.getY());
+                animal.setSatiety(animal.getSatiety()-5); //remove satiety each time a poop is created
+                animal.setTimeMove((int)(Math.random() * 200));
+
+            }
+        }
+    }
