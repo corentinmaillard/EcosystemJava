@@ -17,9 +17,9 @@ To launch it you have to start HelloApplication
 # Sequence diagram
 # SOLID principles
 ## Liskov substitution principle
-Let q(x) be a property provable about objects of x of type T.
-Then q(y) should be provable for objects y of type S
-where S is a subtype of T.
+Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
+
+Here we can replace animal by a subclass of it (hostile, passive,...) and the methods use will still work.
 
     public void move(Animal animal){
         int timeM = animal.getTimeMove();
