@@ -15,6 +15,8 @@ To launch it you have to start HelloApplication
 ![image](https://github.com/corentinmaillard/EcosystemJava/blob/main/Diagram/EcosystemClassDiagram.pdf)
 ![image](Diagram/EcosystemClassDiagram.png)
 # Sequence diagram
+
+![image](Diagram/SequenceDiagram.png)
 # SOLID principles
 ## Liskov substitution principle
 ### Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
