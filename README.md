@@ -15,7 +15,7 @@ To launch it you have to start HelloApplication
 ![image](https://github.com/corentinmaillard/EcosystemJava/blob/main/Diagram/EcosystemClassDiagram.pdf)
 ![image](Diagram/EcosystemClassDiagram.png)
 # Sequence diagram
-
+![image](Diagram/SequenceDiagram.pdf)
 ![image](Diagram/SequenceDiagram.png)
 # SOLID principles
 ## Liskov substitution principle
