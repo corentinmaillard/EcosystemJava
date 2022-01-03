@@ -30,4 +30,6 @@ public class Meat {
     public double getY() {
         return y;
     }
+
+    public Circle getCircle(){return c;}
 }

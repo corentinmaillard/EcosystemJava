@@ -3,7 +3,7 @@ package com.example.eco.MODEL;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class Plant extends LifeObject implements Eatable{
+public class Plant implements Eatable{
     private int x;
     private int y;
     private double Health;
@@ -57,10 +57,6 @@ public class Plant extends LifeObject implements Eatable{
 
     public double getSatiety() {
         return Satiety;
-    }
-
-    public void setColor(Color color){
-        c.setFill(color);
     }
 
     public void draw(){

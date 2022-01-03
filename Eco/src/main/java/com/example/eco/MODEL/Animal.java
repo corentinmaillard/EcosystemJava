@@ -68,10 +68,6 @@ public class Animal{
         return Satiety;
     }
 
-    public void setColor(Color color){
-        c.setFill(color);
-    }
-
     public void draw(){
         c.setRadius(radiusCircle);
         c.setTranslateX(x);
