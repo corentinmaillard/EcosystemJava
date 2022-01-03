@@ -13,5 +13,6 @@ To launch it you have to start HelloApplication
 
 # Class diagram
 ![image](https://github.com/corentinmaillard/EcosystemJava/blob/main/Diagram/EcosystemClassDiagram.pdf)
+![image](Diagram/EcosystemClassDiagram.png)
 # Sequence diagram
 # SOLID principles
