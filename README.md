@@ -12,5 +12,6 @@ To launch it you have to start HelloApplication
 5) The purple circle are meat
 
 # Class diagram
+https://github.com/corentinmaillard/EcosystemJava/blob/main/Diagram/EcosystemClassDiagram.pdf
 # Sequence diagram
 # SOLID principles
